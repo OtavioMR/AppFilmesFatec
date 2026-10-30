@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+        <EditText android:id="@+id/edtTitulo" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:hint="Título" android:inputType="textCapSentences"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <Spinner android:id="@+id/spTipo" android:layout_width="0dp" android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@id/edtTitulo" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <EditText android:id="@+id/edtInicio" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:hint="Início (dd/MM/aaaa)" android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/spTipo" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <EditText android:id="@+id/edtFim" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:hint="Término (dd/MM/aaaa)" android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/edtInicio" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <EditText android:id="@+id/edtOpiniao" android:layout_width="0dp" android:layout_height="120dp"
+            android:hint="O que você achou?" android:gravity="top" android:inputType="textMultiLine" android:minLines="3"
+            app:layout_constraintTop_toBottomOf="@id/edtFim" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <EditText android:id="@+id/edtNota" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:hint="Nota de 0 a 10 (opcional)" android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/edtOpiniao" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        <Button android:id="@+id/btnSalvar" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Salvar"
+            app:layout_constraintTop_toBottomOf="@id/edtNota" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
